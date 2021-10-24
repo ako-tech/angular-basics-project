@@ -6,7 +6,7 @@ El repositorio esta divido en ramas, cada una de las cuales se corresponde con u
 
 ## Playlist Completa
 
-La playlist completa con los videos del curso la podeis encontrar [aquí](https://youtu.be/AS-sfXfJC7M)
+La playlist completa con los videos del curso la podeis encontrar [aquí](https://youtube.com/playlist?list=PL4vWncexIMYvaYdepQvyryGBhIHU-Sd04)
 
 ## Ramas (Branches)
 
