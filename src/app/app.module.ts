@@ -7,36 +7,8 @@ import { ShoppingCartModule } from './shopping-cart/shopping-cart.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { NavDrawerComponent } from './nav-drawer/nav-drawer.component';
-import { ContactModule } from './contact/contact.module';
-import { RouterModule, Routes } from '@angular/router';
-import { CatalogComponent } from './catalog/catalog.component';
-import { ContactComponent } from './contact/contact.component';
-import { ProductDetailsComponent } from './catalog/product-details/product-details.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-
-const routes: Routes = [
-  {
-    path: '',
-    redirectTo: 'catalog',
-    pathMatch: 'full',
-  },
-  {
-    path: 'catalog',
-    component: CatalogComponent,
-  },
-  {
-    path: 'catalog/products/:id',
-    component: ProductDetailsComponent,
-  },
-  {
-    path: 'contact',
-    component: ContactComponent,
-  },
-  {
-    path: '**',
-    component: PageNotFoundComponent,
-  },
-];
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -45,13 +17,7 @@ const routes: Routes = [
     NavDrawerComponent,
     PageNotFoundComponent,
   ],
-  imports: [
-    BrowserModule,
-    ShoppingCartModule,
-    CatalogModule,
-    ContactModule,
-    RouterModule.forRoot(routes),
-  ],
+  imports: [BrowserModule, ShoppingCartModule, CatalogModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
