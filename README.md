@@ -1,27 +1,36 @@
-# ShoppingCart
+# Proyecto del Curso de Angular Basics
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.1.3.
+Proyecto del curso introductorio a Angular en el que vamos viendo los elementos básicos del framework, usando como ejemplo el desarrollo de una aplicación de una tienda.
 
-## Development server
+El repositorio esta divido en ramas, cada una de las cuales se corresponde con una etapa del desarrollo de la aplicación.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Playlist Completa
 
-## Code scaffolding
+La playlist completa con los videos del curso la podeis encontrar [aquí](https://youtu.be/AS-sfXfJC7M)
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Ramas (Branches)
 
-## Build
+- Introducción
+- CLI
+- [Componentes](https://github.com/ako-tech/angular-basics-project/tree/2-componentes)
+- [Servicios](https://github.com/ako-tech/angular-basics-project/tree/3-services)
+- [Pipes](https://github.com/ako-tech/angular-basics-project/tree/4-pipes)
+- [Módulos](https://github.com/ako-tech/angular-basics-project/tree/5-modules) (NgModules)
+- [Enrutamiento](https://github.com/ako-tech/angular-basics-project/tree/6-routing) (Routing)
+- [Observables](https://github.com/ako-tech/angular-basics-project/tree/7-observables)
+- [Formularios](https://github.com/ako-tech/angular-basics-project/tree/8-forms) (Reactivos y Dirigidos por Plantilla)
+- [HttpClient](https://github.com/ako-tech/angular-basics-project/tree/9-http)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+## Observaciones
 
-## Running unit tests
+El único objetivo de este proyecto es mostrar las caracteristicas principales del framework de angular. Debido a esto, una parte del código esta simplificado para una mostrar dichas caracteristicas más claramente. Incluyendo entre otras cosas el CSS imprescindible para mostrar la aplicación correctamente única y exclusivamente en los videos del mismo y para una anchura del visor de 500px.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Este proyecto **NO** está pensado para producción.
 
-## Running end-to-end tests
+## Comandos
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+El proyecto está realizado sobre la v11 de Angular.
 
-## Further help
+Para levantar un servidor de desarrollo usar el comando `ng serve`. Este estará disponible en `http://localhost:4200/`.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Para compilar la aplicación usar el comando `ng build`. Pudiendo usar la opcion `--prod` para compilar la versión de producción. Los archivos de la aplicación estarán disponibles en la carpeta `dist/`.
