@@ -2,12 +2,7 @@
 <form [formGroup]="loginForm">
   <label>
     Email
-    <input
-      type="email"
-      name="email"
-      formControlName="email"
-      autocomplete="off"
-    />
+    <input type="email" name="email" formControlName="email" />
   </label>
   <app-form-error-container [forControl]="emailControl">
     <app-form-error-msg forErrorCode="required"></app-form-error-msg>
