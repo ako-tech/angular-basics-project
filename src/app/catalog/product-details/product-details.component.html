@@ -1,21 +1,23 @@
 <a routerLink="/catalog" class="back">&lt; Volver al catalogo</a>
 <div class="container">
-  <div class="img-container">
-    <img
-      src="/assets/items/{{ product?.imageUrl }}"
-      alt="{{ product?.name }}"
-    />
-  </div>
-  <div class="info">
-    <p class="product-name">{{ product?.name }}</p>
-    <p class="product-short-description">Descripción corta del producto.</p>
-    <div class="cart-row">
-      <span class="price"
-        >{{ product?.price | number: "1.2-2" }} <small>&euro;</small></span
-      >
-      <button (click)="addToCart()" title="Añadir al Carrito">
-        <img src="/assets/add_white.svg" alt="+" /> Añadir al carrito
-      </button>
+  <ng-container *ngIf="product$ | async as product">
+    <div class="img-container">
+      <img
+        src="/assets/items/{{ product.imageUrl }}"
+        alt="{{ product.name }}"
+      />
     </div>
-  </div>
+    <div class="info">
+      <p class="product-name">{{ product.name }}</p>
+      <p class="product-short-description">Descripción corta del producto.</p>
+      <div class="cart-row">
+        <span class="price"
+          >{{ product.price | number: "1.2-2" }} <small>&euro;</small></span
+        >
+        <button (click)="addToCart(product)" title="Añadir al Carrito">
+          <img src="/assets/add_white.svg" alt="+" /> Añadir al carrito
+        </button>
+      </div>
+    </div>
+  </ng-container>
 </div>
