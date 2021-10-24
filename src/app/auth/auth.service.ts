@@ -7,7 +7,7 @@ import { LoginCredentials } from './login/login-credentials';
   providedIn: 'root',
 })
 export class AuthService {
-  private loggedIn = new BehaviorSubject<boolean>(true); //TODO: revert to false after formsVideo;
+  private loggedIn = new BehaviorSubject<boolean>(false);
   loggedIn$ = this.loggedIn.asObservable();
 
   constructor(private router: Router) {}
