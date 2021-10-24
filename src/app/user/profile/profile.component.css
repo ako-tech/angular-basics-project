@@ -5,5 +5,26 @@
 }
 
 h1 {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+h2 {
+  color: #5c5c5c;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+hr {
+  margin-bottom: 40px;
+  margin-top: 20px;
+  border: none;
+  height: 1px;
+  background-color: #cbcbcb;
 }

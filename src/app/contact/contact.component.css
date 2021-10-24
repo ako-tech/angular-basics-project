@@ -25,10 +25,6 @@ textarea {
   font-size: 1rem;
   margin-bottom: 16px;
 }
-input:focus,
-textarea:focus {
-  outline-color: #5e00ea;
-}
 
 textarea {
   height: 200px;
@@ -50,4 +46,8 @@ button:hover,
 button:focus {
   background-color: #7d29fa;
   outline: none;
+}
+button:disabled {
+  background-color: #505050;
+  cursor: not-allowed;
 }

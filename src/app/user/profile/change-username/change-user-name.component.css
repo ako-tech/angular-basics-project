@@ -1,0 +1,10 @@
+label {
+  position: relative;
+}
+.loader {
+  position: absolute;
+  bottom: 25px;
+  right: 10px;
+  z-index: 4;
+  color: #838a2a;
+}

@@ -14,3 +14,33 @@ body {
   height: 100vh;
   background-color: #f5f5f5;
 }
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+input:focus,
+textarea:focus {
+  outline-color: #5e00ea;
+}
+
+textarea {
+  height: 200px;
+}
+
+.ng-touched.ng-invalid:is(input, textarea),
+.ng-dirty.ng-invalid:is(input, textarea) {
+  outline: 2px solid #bd0c0c;
+}
+
+.ng-dirty.ng-pending:is(input, textarea) {
+  outline: 2px solid #838a2a;
+}

@@ -1,0 +1,36 @@
+label {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 16px;
+}
+input {
+  width: 200px;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+
+label button {
+  border: none;
+  background: none;
+  color: #707070;
+  cursor: pointer;
+}
+
+label button:hover {
+  color: #bd0c0c;
+}
+
+app-form-error-container {
+  margin-bottom: 16px;
+}
+
+button.add {
+  border: 1px solid #cbcbcb;
+  border-radius: 8px;
+  padding: 8px;
+  background: none;
+  color: #333;
+  font-size: 1rem;
+  cursor: pointer;
+}

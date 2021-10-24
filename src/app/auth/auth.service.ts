@@ -6,7 +6,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private loggedIn = new BehaviorSubject<boolean>(false);
+  private loggedIn = new BehaviorSubject<boolean>(true); //TODO: revert to false after formsVideo;
   loggedIn$ = this.loggedIn.asObservable();
 
   constructor(private router: Router) {}

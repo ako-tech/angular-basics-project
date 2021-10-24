@@ -1,0 +1,11 @@
+<form name="phones" [formGroup]="phonesForm">
+  <div formArrayName="phones">
+    <ng-container *ngFor="let phone of phones.controls; index as i">
+      <label>
+        <input type="text" name="phones-{{ i }}" [formControlName]="i" />
+        <button (click)="deletePhoneAtRow(i)">Eliminar</button>
+      </label>
+    </ng-container>
+    <button class="add" (click)="addPhoneRow()">+ Añadir Número</button>
+  </div>
+</form>
