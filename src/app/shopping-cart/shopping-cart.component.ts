@@ -8,7 +8,9 @@ import { ShoppingCartService } from './shopping-cart.service';
   styleUrls: ['./shopping-cart.component.css'],
 })
 export class ShoppingCartComponent implements OnInit {
-  cartItems: CartItem[] = this.shoppingcartService.items;
+  get cartItems(): CartItem[] {
+    return this.shoppingcartService.items;
+  }
 
   get total(): number {
     return this.shoppingcartService.total;
