@@ -7,7 +7,7 @@ import { CartItem } from './cart-item';
   styleUrls: ['./shopping-cart-item.component.css'],
 })
 export class ShoppingCartItemComponent implements OnInit {
-  @Input() cartItem: CartItem;
+  @Input() cartItem!: CartItem;
 
   @Output() cartItemDelete = new EventEmitter<void>();
   constructor() {}
