@@ -5,6 +5,9 @@
         <input type="text" name="phones-{{ i }}" [formControlName]="i" />
         <button (click)="deletePhoneAtRow(i)">Eliminar</button>
       </label>
+      <app-form-error-container [forControl]="phone">
+        <app-form-error-msg forErrorCode="required"></app-form-error-msg>
+      </app-form-error-container>
     </ng-container>
     <button class="add" (click)="addPhoneRow()">+ Añadir Número</button>
   </div>

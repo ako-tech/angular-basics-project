@@ -19,7 +19,7 @@ export class PhonesComponent {
   constructor() {}
 
   addPhoneRow(): void {
-    this.phones.push(new FormControl(''));
+    this.phones.push(new FormControl('', Validators.required));
   }
 
   deletePhoneAtRow(index: number): void {

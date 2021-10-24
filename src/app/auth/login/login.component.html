@@ -2,11 +2,27 @@
 <form [formGroup]="loginForm">
   <label>
     Email
-    <input type="email" name="email" formControlName="email" />
+    <input
+      type="email"
+      name="email"
+      formControlName="email"
+      autocomplete="off"
+    />
   </label>
+  <app-form-error-container [forControl]="emailControl">
+    <app-form-error-msg forErrorCode="required"></app-form-error-msg>
+    <app-form-error-msg forErrorCode="email"></app-form-error-msg>
+  </app-form-error-container>
+
   <label>
     Contraseña
     <input type="password" name="password" formControlName="password" />
   </label>
-  <button (click)="signIn()" type="submit">Iniciar Sesión</button>
+  <app-form-error-container [forControl]="passwordControl">
+    <app-form-error-msg forErrorCode="required"></app-form-error-msg>
+  </app-form-error-container>
+
+  <button (click)="signIn()" type="submit" [disabled]="loginForm.invalid">
+    Iniciar Sesión
+  </button>
 </form>

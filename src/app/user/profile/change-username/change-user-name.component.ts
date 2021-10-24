@@ -1,5 +1,7 @@
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { checkUsernameIsAvailable } from 'src/app/form-extensions';
+import { UserService } from '../../user.service';
 
 @Component({
   selector: 'app-profile-change-username',
@@ -8,7 +10,10 @@ import { FormControl } from '@angular/forms';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ChangeUsernameComponent {
-  newUsernameControl = new FormControl('miNombreActual');
+  newUsernameControl = new FormControl('miNombreActual', {
+    asyncValidators: checkUsernameIsAvailable(this.userService),
+    updateOn: 'blur',
+  });
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 }

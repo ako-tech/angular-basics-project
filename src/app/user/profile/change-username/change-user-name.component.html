@@ -2,6 +2,16 @@
   <label>
     Nombre de usuario
     <input type="text" name="new-username" [formControl]="newUsernameControl" />
-    <div class="loader">Comprobando...</div>
+    <div
+      class="loader"
+      *ngIf="(newUsernameControl.statusChanges | async) === 'PENDING'"
+    >
+      Comprobando...
+    </div>
   </label>
+  <app-form-error-container [forControl]="newUsernameControl">
+    <app-form-error-msg
+      forErrorCode="checkUsernameIsAvailable"
+    ></app-form-error-msg>
+  </app-form-error-container>
 </form>
