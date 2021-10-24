@@ -1,1 +1,3 @@
-<app-shopping-cart></app-shopping-cart>
+<app-header (toggleCartVisibility)="toggleCartVisibility()"></app-header>
+<app-catalog></app-catalog>
+<app-shopping-cart *ngIf="isCartVisible"></app-shopping-cart>

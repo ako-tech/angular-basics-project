@@ -1,0 +1,42 @@
+:host {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  height: 50px;
+  padding: 0 16px;
+  background-color: #5e00ea;
+  color: #fff;
+}
+
+.logo {
+  font-weight: 600;
+}
+
+.cart {
+  background: none;
+  padding: 8px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  position: relative;
+}
+
+.cart:hover {
+  background-color: #7d29fa;
+}
+
+.cart img {
+  width: 22px;
+  height: auto;
+}
+
+.cart span {
+  position: absolute;
+  top: 0;
+  right: -10;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 600;
+}
