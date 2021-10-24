@@ -7,5 +7,5 @@ export const errorsDictionary: ErrorsDictionary = {
   email: 'Debe ser un email válido.',
   passwordsMustBeEqual: 'Las contraseñas no coinciden.',
   checkUsernameIsAvailable: 'El nombre de usuario no está disponible.',
-  unauthorized: 'Las credenciales proporcionadas son incorrectas.',
+  invalidCredentials: 'Las credenciales proporcionadas son incorrectas.',
 };
