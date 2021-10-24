@@ -26,6 +26,21 @@
   width: 100%;
 }
 
+.img-container,
+.product-name {
+  cursor: pointer;
+}
+.product-name {
+  text-decoration: none;
+  color: black;
+}
+
+.img-container:hover ~ .info > .product-name,
+.product-name:hover {
+  color: #5e00ea;
+  text-decoration: underline;
+}
+
 .info {
   padding-left: 16px;
   align-self: flex-start;
