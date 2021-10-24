@@ -7,16 +7,19 @@ import { Product } from './product';
 export class CatalogService {
   readonly products: Product[] = [
     {
+      id: 1,
       imageUrl: 'headphones.jpg',
       name: 'Auriculares',
       price: 50,
     },
     {
+      id: 2,
       imageUrl: 'keyboard.jpg',
       name: 'Teclado',
       price: 14.5,
     },
     {
+      id: 3,
       imageUrl: 'monitor.jpg',
       name: 'Monitor',
       price: 199.99,
