@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthService } from '../auth.service';
 
@@ -8,16 +8,11 @@ import { AuthService } from '../auth.service';
   styleUrls: ['./login.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class LoginComponent implements OnInit {
+export class LoginComponent {
   loginForm = new FormGroup({
     email: new FormControl('', [Validators.required, Validators.email]),
     password: new FormControl('', Validators.required),
   });
-
-  // loginFormFb = this.fb.group({
-  //   email: ['', [Validators.required, Validators.email]],
-  //   password: ['', Validators.required],
-  // });
 
   get emailControl(): FormControl {
     return this.loginForm.get('email') as FormControl;
@@ -28,8 +23,6 @@ export class LoginComponent implements OnInit {
   }
 
   constructor(private authService: AuthService) {}
-
-  ngOnInit(): void {}
 
   signIn(): void {
     const credentials = this.loginForm.value;
