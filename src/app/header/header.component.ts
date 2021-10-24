@@ -10,11 +10,10 @@ export class HeaderComponent implements OnInit {
   @Output() toggleCartVisibility = new EventEmitter<void>();
   @Output() toggleMenu = new EventEmitter<void>();
 
+  itemsCount$ = this.scService.itemsCount$;
+
   constructor(private scService: ShoppingCartService) {}
 
-  get itemsCount(): number {
-    return this.scService.itemsCount;
-  }
   ngOnInit(): void {}
 
   onCartClicked(): void {

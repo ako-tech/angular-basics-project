@@ -4,5 +4,5 @@
 <a class="logo" routerLink="/">MyShop</a>
 <button class="cart" (click)="onCartClicked()">
   <img src="/assets/shopping_cart.svg" alt="Open Cart" />
-  <span>{{ itemsCount }}</span>
+  <span>{{ itemsCount$ | async }}</span>
 </button>
