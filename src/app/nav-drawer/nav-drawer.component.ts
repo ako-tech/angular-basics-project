@@ -1,10 +1,4 @@
-import {
-  Component,
-  EventEmitter,
-  HostListener,
-  OnInit,
-  Output,
-} from '@angular/core';
+import { Component, EventEmitter, HostListener, Output } from '@angular/core';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
@@ -12,10 +6,8 @@ import { AuthService } from '../auth/auth.service';
   templateUrl: './nav-drawer.component.html',
   styleUrls: ['./nav-drawer.component.css'],
 })
-export class NavDrawerComponent implements OnInit {
-  get isUserLoggedIn(): boolean {
-    return this.authService.loggedIn;
-  }
+export class NavDrawerComponent {
+  isUserLoggedIn$ = this.authService.loggedIn$;
 
   @Output() closeDrawer = new EventEmitter<void>();
 
@@ -23,8 +15,6 @@ export class NavDrawerComponent implements OnInit {
     this.closeDrawer.emit();
   }
   constructor(private authService: AuthService) {}
-
-  ngOnInit(): void {}
 
   logOut(): void {
     this.authService.logOut();

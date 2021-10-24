@@ -8,10 +8,10 @@
   </ul>
 
   <div class="user-row">
-    <ng-container *ngIf="!isUserLoggedIn">
+    <ng-container *ngIf="!(isUserLoggedIn$ | async)">
       <a routerLink="login">Iniciar Sesión</a>
     </ng-container>
-    <ng-container *ngIf="isUserLoggedIn">
+    <ng-container *ngIf="isUserLoggedIn$ | async">
       <a routerLink="user/profile">Perfil</a>
       <a href="" (click)="logOut(); (false)">Cerrar Sesión</a>
     </ng-container>
