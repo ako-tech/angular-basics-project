@@ -1,12 +1,12 @@
 <h1>Inicia Sesión</h1>
-<form>
+<form [formGroup]="loginForm">
   <label>
     Email
-    <input type="email" name="email" />
+    <input type="email" name="email" formControlName="email" />
   </label>
   <label>
     Contraseña
-    <input type="password" name="password" />
+    <input type="password" name="password" formControlName="password" />
   </label>
+  <button (click)="signIn()" type="submit">Iniciar Sesión</button>
 </form>
-<button (click)="signIn()">Iniciar Sesión</button>
