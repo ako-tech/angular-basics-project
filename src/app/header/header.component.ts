@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { ShoppingCartService } from '../shopping-cart/shopping-cart.service';
 
 @Component({
   selector: 'app-header',
@@ -8,8 +9,11 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Output() toggleCartVisibility = new EventEmitter<void>();
 
-  constructor() {}
+  constructor(private scService: ShoppingCartService) {}
 
+  get itemsCount(): number {
+    return this.scService.itemsCount;
+  }
   ngOnInit(): void {}
 
   onCartClicked(): void {

@@ -5,26 +5,18 @@ import { CartItem } from './cart-item';
   providedIn: 'root',
 })
 export class ShoppingCartService {
-  items: CartItem[] = [
-    {
-      imageUrl: 'headphones.jpg',
-      name: 'Auriculares',
-      price: 50,
-    },
-    {
-      imageUrl: 'keyboard.jpg',
-      name: 'Teclado',
-      price: 14.5,
-    },
-    {
-      imageUrl: 'monitor.jpg',
-      name: 'Monitor',
-      price: 199.99,
-    },
-  ];
+  items: CartItem[] = [];
+
+  get itemsCount(): number {
+    return this.items.length;
+  }
 
   get total(): number {
     return this.items.reduce((acc, { price }) => (acc += price), 0);
+  }
+
+  addItem(item: CartItem): void {
+    this.items = [...this.items, item];
   }
 
   deleteItem(itemToDelete: CartItem): void {
