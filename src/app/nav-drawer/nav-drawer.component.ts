@@ -1,10 +1,17 @@
-import { Component, EventEmitter, HostListener, Output } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  Component,
+  EventEmitter,
+  HostListener,
+  Output,
+} from '@angular/core';
 import { AuthService } from '../auth/auth.service';
 
 @Component({
   selector: 'app-nav-drawer',
   templateUrl: './nav-drawer.component.html',
   styleUrls: ['./nav-drawer.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavDrawerComponent {
   isUserLoggedIn$ = this.authService.loggedIn$;

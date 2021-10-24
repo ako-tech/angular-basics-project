@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, switchMap, tap } from 'rxjs/operators';
@@ -11,6 +11,7 @@ import { Product } from '../product';
   selector: 'app-product-details',
   templateUrl: './product-details.component.html',
   styleUrls: ['./product-details.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProductDetailsComponent {
   id$: Observable<number> = this.route.paramMap.pipe(
