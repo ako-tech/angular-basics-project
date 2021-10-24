@@ -6,4 +6,14 @@
     <li><a routerLink="catalog">Catálogo</a></li>
     <li><a routerLink="contact">Contacto</a></li>
   </ul>
+
+  <div class="user-row">
+    <ng-container *ngIf="!isUserLoggedIn">
+      <a routerLink="login">Iniciar Sesión</a>
+    </ng-container>
+    <ng-container *ngIf="isUserLoggedIn">
+      <a routerLink="user/profile">Perfil</a>
+      <a href="" (click)="logOut(); (false)">Cerrar Sesión</a>
+    </ng-container>
+  </div>
 </nav>

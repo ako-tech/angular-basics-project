@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { NavDrawerComponent } from './nav-drawer/nav-drawer.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,13 @@ import { AppRoutingModule } from './app-routing.module';
     NavDrawerComponent,
     PageNotFoundComponent,
   ],
-  imports: [BrowserModule, ShoppingCartModule, CatalogModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    ShoppingCartModule,
+    CatalogModule,
+    AuthModule,
+    AppRoutingModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -1,0 +1,53 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+h1 {
+  margin-bottom: 16px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+}
+input,
+textarea {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 1rem;
+  margin-bottom: 16px;
+}
+input:focus,
+textarea:focus {
+  outline-color: #5e00ea;
+}
+
+textarea {
+  height: 200px;
+}
+
+button {
+  padding: 12px 16px;
+  background-color: #5e00ea;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 32px;
+}
+
+button:hover,
+button:focus {
+  background-color: #7d29fa;
+  outline: none;
+}

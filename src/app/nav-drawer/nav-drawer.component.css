@@ -37,7 +37,7 @@ nav ul {
   flex-direction: column;
   margin: 0;
   list-style: none;
-  /* border-bottom: 1px solid #5e00ea; */
+  border-bottom: 1px solid #5e00ea;
   padding-bottom: 16px;
 }
 a {
