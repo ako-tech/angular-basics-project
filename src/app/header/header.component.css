@@ -10,32 +10,43 @@
 }
 
 .logo {
+  color: white;
+  text-decoration: none;
   font-weight: 600;
 }
+.logo:hover {
+  text-decoration: underline;
+}
 
-.cart {
+button {
+  display: grid;
+  place-items: center;
   background: none;
   padding: 8px;
   border: none;
   border-radius: 50%;
   cursor: pointer;
   outline: none;
-  position: relative;
 }
 
-.cart:hover {
+button:hover {
   background-color: #7d29fa;
+}
+
+.cart {
+  position: relative;
+  top: 2px;
 }
 
 .cart img {
   width: 22px;
-  height: auto;
+  height: 22px;
 }
 
 .cart span {
   position: absolute;
-  top: 0;
-  right: -10;
+  top: -5px;
+  right: 1px;
   font-size: 14px;
   color: #fff;
   font-weight: 600;

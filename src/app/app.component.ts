@@ -7,8 +7,18 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   isCartVisible = false;
+  isMenuOpened = false;
 
   toggleCartVisibility(): void {
     this.isCartVisible = !this.isCartVisible;
+  }
+
+  showMenu(): void {
+    this.isCartVisible = false;
+    this.isMenuOpened = true;
+  }
+
+  hideMenu(): void {
+    this.isMenuOpened = false;
   }
 }

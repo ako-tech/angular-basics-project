@@ -8,6 +8,7 @@ import { ShoppingCartService } from '../shopping-cart/shopping-cart.service';
 })
 export class HeaderComponent implements OnInit {
   @Output() toggleCartVisibility = new EventEmitter<void>();
+  @Output() toggleMenu = new EventEmitter<void>();
 
   constructor(private scService: ShoppingCartService) {}
 
@@ -18,5 +19,9 @@ export class HeaderComponent implements OnInit {
 
   onCartClicked(): void {
     this.toggleCartVisibility.emit();
+  }
+
+  onMenuClicked(): void {
+    this.toggleMenu.emit();
   }
 }

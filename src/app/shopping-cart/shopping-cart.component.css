@@ -10,6 +10,7 @@
   padding: 28px;
   background-color: #fff;
   overflow-y: auto;
+  z-index: 999;
 }
 
 .title {

@@ -1,4 +1,7 @@
-<span class="logo">MyShop</span>
+<button (click)="onMenuClicked()">
+  <img src="/assets/menu_white.svg" alt="Abrir Menú" />
+</button>
+<a class="logo" routerLink="/">MyShop</a>
 <button class="cart" (click)="onCartClicked()">
   <img src="/assets/shopping_cart.svg" alt="Open Cart" />
   <span>{{ itemsCount }}</span>

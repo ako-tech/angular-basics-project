@@ -1,3 +1,10 @@
-<app-header (toggleCartVisibility)="toggleCartVisibility()"></app-header>
-<app-catalog></app-catalog>
+<app-header
+  (toggleCartVisibility)="toggleCartVisibility()"
+  (toggleMenu)="showMenu()"
+></app-header>
+<app-nav-drawer
+  *ngIf="isMenuOpened"
+  (closeDrawer)="hideMenu()"
+></app-nav-drawer>
 <app-shopping-cart *ngIf="isCartVisible"></app-shopping-cart>
+<app-catalog></app-catalog>

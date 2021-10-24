@@ -48,6 +48,8 @@ button {
   background-color: #5e00ea;
   cursor: pointer;
   color: #fff;
+  display: grid;
+  place-items: center;
 }
 
 button img {
