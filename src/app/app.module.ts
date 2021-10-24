@@ -12,8 +12,14 @@ import { RouterModule, Routes } from '@angular/router';
 import { CatalogComponent } from './catalog/catalog.component';
 import { ContactComponent } from './contact/contact.component';
 import { ProductDetailsComponent } from './catalog/product-details/product-details.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
+  {
+    path: '',
+    redirectTo: 'catalog',
+    pathMatch: 'full',
+  },
   {
     path: 'catalog',
     component: CatalogComponent,
@@ -26,10 +32,19 @@ const routes: Routes = [
     path: 'contact',
     component: ContactComponent,
   },
+  {
+    path: '**',
+    component: PageNotFoundComponent,
+  },
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, NavDrawerComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    NavDrawerComponent,
+    PageNotFoundComponent,
+  ],
   imports: [
     BrowserModule,
     ShoppingCartModule,
