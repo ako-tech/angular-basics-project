@@ -26,4 +26,8 @@ export class CatalogService {
     },
   ];
   constructor() {}
+
+  getProduct(requestId: number): Product | null {
+    return this.products.find((product) => product.id === requestId) || null;
+  }
 }
