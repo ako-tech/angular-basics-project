@@ -5,7 +5,7 @@
   <span
     ><strong>{{ product.name }}</strong>
   </span>
-  <span>{{ product.price }} &euro;</span>
+  <span>{{ product.price | number: "1.2-2" }} &euro;</span>
 </div>
 <button (click)="addToCart()" title="Añadir al Carrito">
   <img src="/assets/add_white.svg" alt="+" />

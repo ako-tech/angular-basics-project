@@ -5,7 +5,7 @@
 />
 <div class="info">
   <span>{{ cartItem?.name }}</span>
-  <span class="info-price">{{ cartItem?.price }} €</span>
+  <span class="info-price">{{ cartItem?.price | number: "1.2-2" }} €</span>
 </div>
 <button (click)="onDeleteClicked()">
   <img src="/assets/close.svg" alt="Eliminar articulo" />

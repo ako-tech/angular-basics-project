@@ -6,6 +6,8 @@
   (cartItemDelete)="deleteItem(item)"
 ></app-shopping-cart-item>
 
-<p class="total"><span class="total-label">total:</span> {{ total }} €</p>
+<p class="total">
+  <span class="total-label">total:</span> {{ total | number: "1.2-2" }} €
+</p>
 
 <button>Finalizar Pedido</button>
