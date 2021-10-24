@@ -26,7 +26,5 @@ export const doesntContainNTilde: ValidatorFn = (
   ],
 })
 export class DoesntContainNTildeDirective implements Validator {
-  validate(control: AbstractControl): ValidationErrors | null {
-    return null;
-  }
+  validate = doesntContainNTilde;
 }

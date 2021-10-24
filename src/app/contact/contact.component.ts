@@ -7,7 +7,14 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ContactComponent {
+  model = {
+    name: 'Un Nombre',
+    email: 'un@email.es',
+    message: 'Un Mensaje',
+  };
   constructor() {}
 
-  onSubmit(): void {}
+  onSubmit(formValue: any): void {
+    //procesar envio
+  }
 }
