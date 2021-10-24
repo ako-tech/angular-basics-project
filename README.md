@@ -34,3 +34,11 @@ El proyecto está realizado sobre la v11 de Angular.
 Para levantar un servidor de desarrollo usar el comando `ng serve`. Este estará disponible en `http://localhost:4200/`.
 
 Para compilar la aplicación usar el comando `ng build`. Pudiendo usar la opcion `--prod` para compilar la versión de producción. Los archivos de la aplicación estarán disponibles en la carpeta `dist/`.
+
+## Requisitos
+
+A partir de este commit la aplicación requiere para correr en desarrollo de un servidor local en el puerto `:3000` con los siguientes endpoints:
+
+- `GET catalog/products`: que devuelva `200 Product[]`
+- `GET catalog/products/:id`: que devuelva `200 Product` si el producto existe o `404` si no existe.
+- `POST auth/login`: que devuelva `200 SuccessfulLoginDto` si las credenciales son válidas o `401` si son inválidas.

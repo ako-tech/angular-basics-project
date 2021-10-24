@@ -26,6 +26,9 @@ export class LoginComponent {
 
   signIn(): void {
     const credentials = this.loginForm.value;
-    this.authService.logIn(credentials);
+    this.loginForm.markAsPending();
+    this.authService.logIn(credentials).subscribe({
+      error: () => this.loginForm.setErrors({ invalidCredentials: true }),
+    });
   }
 }

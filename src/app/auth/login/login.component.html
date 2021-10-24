@@ -17,7 +17,15 @@
     <app-form-error-msg forErrorCode="required"></app-form-error-msg>
   </app-form-error-container>
 
-  <button (click)="signIn()" type="submit" [disabled]="loginForm.invalid">
+  <app-form-error-container [forControl]="loginForm">
+    <app-form-error-msg forErrorCode="invalidCredentials"></app-form-error-msg>
+  </app-form-error-container>
+
+  <button
+    (click)="signIn()"
+    type="submit"
+    [disabled]="(loginForm.statusChanges | async) !== 'VALID'"
+  >
     Iniciar Sesión
   </button>
 </form>
